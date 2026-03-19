@@ -116,27 +116,12 @@ def predict():
         filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
         file.save(filepath)
 
-    results = model(filepath)
 
-    # Demo prediction (temporary fix)
+    # Demo prediction
 disease = "Melanocytic Nevus"
 confidence = 82.45
 
 info = disease_info[disease]
-    info = disease_info[disease]
-
-    # save for PDF
-    global last_result
-    last_result = {
-        "name": name,
-        "age": age,
-        "disease": disease,
-        "confidence": confidence,
-        "treatment": info["treatment"],
-        "doctor": info["doctor"],
-        "hospital": info["hospital"]
-    }
-
     return render_template(
         "result.html",
         name=name,
