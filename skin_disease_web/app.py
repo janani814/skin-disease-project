@@ -117,7 +117,7 @@ def predict():
         file.save(filepath)
 
 
-    # Demo prediction
+# Demo prediction
 disease = "Melanocytic Nevus"
 confidence = 82.45
 
